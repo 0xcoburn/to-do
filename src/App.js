@@ -4,14 +4,20 @@ import Form from "./components/Form";
 import TodoList from "./components/TodoList";
 
 function App() {
-  const [inputText, setInputText] = React.useState(" ");
+  const [inputText, setInputText] = React.useState("");
+  const [todos, setTodos] = useState([]);
   return (
     <div className="App">
       <header>
-        <h1>Matt's to do list {inputText}</h1>
+        <h1>Matt's to do list</h1>
       </header>
-      <Form setInputText={setInputText} />
-      <TodoList inputText={inputText} />
+      <Form
+        todos={todos}
+        setTodos={setTodos}
+        inputText={inputText}
+        setInputText={setInputText}
+      />
+      <TodoList setTodos={setTodos} todos={todos} />
     </div>
   );
 }
