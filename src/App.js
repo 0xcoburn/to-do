@@ -6,6 +6,9 @@ import TodoList from "./components/TodoList";
 function App() {
   const [inputText, setInputText] = React.useState("");
   const [todos, setTodos] = useState([]);
+  const [filter, setFilter] = useState("all");
+  const [filteredTodos, setFilteredTodos] = useState([]);
+
   return (
     <div className="App">
       <header>
@@ -16,6 +19,7 @@ function App() {
         setTodos={setTodos}
         inputText={inputText}
         setInputText={setInputText}
+        setFilter={setFilter}
       />
       <TodoList setTodos={setTodos} todos={todos} />
     </div>
