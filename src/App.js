@@ -32,7 +32,7 @@ function App() {
       case "uncompleted":
         setDisplayedTodos(todos.filter((todo) => todo.completed === false));
         break;
-      default:
+      case "all":
         setDisplayedTodos(todos);
         break;
     }
@@ -90,6 +90,7 @@ function App() {
         inputText={inputText}
         setInputText={setInputText}
         setFilter={setFilter}
+        filter={filter}
       />
       <TodoList
         displayedTodos={displayedTodos}
