@@ -15,7 +15,6 @@ const Form = ({ inputText, setInputText, todos, setTodos, setFilter }) => {
   };
 
   const filterHandler = (e) => {
-    console.log(e.target.value);
     setFilter(e.target.value);
   };
 
